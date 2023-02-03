@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Your Checkcode</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h4>Input Your Checkcode</h4>
+    <form action="/getflag2" method="post">
+        <input type="text" name="checkcode" id="checkcode">
+        <button type="submit" id="button">Check</button>
+    </form>
+    <script>
+        button = document.getElementById("button")
+        button.onclick = e => {
+            e.preventDefault()
+            if(!document.getElementById("checkcode").value){
+                return
+            }
+            fetch("/getflag2",{
+                method: 'POST',
+                headers: {
+                    'Content-Type':'application/json'
+                },
+                body: JSON.stringify({'checkcode': document.getElementById("checkcode").value})
+            })
+                .then(response => response.json())
+                .then(data => alert(data.msg))
+        }
+    </script>
+</body>
+
+</html>

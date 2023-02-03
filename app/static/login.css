@@ -1,0 +1,53 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    padding: 2em;
+}
+
+.form-item {
+    margin: 2em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.form-item > input {
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, .6);
+    margin-top: 2em;
+}
+
+input:hover, input:active, input:focus {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0);
+}
+
+label {
+    margin-right: 1em;
+}
+
+.button {
+    color: white;
+    padding: 25px 110px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    cursor: pointer;
+}

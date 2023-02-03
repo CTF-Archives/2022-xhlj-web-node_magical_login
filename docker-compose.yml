@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  app01:
+    build: .
+    ports:
+      - "80:80"
+    environment:
+     - FLAG1=DASCTF{xxxxxx
+     - FLAG2=xxxxxx}
+     - PORT=80
+     - SECRET_COOKIE=xxxxxxxxxx
+
+
